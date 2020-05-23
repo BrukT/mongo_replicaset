@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 
 uri = "mongodb://bruk:bruk@mongo1:27017,mongo2:27017,mongo3:27017/?replicaSet=rs0&authSource=admin"
-uri = "mongodb://bruk:bruk@mongo1:27017/?replicaSet=rs0&authSource=admin"
-client = MongoClient(uri,connect=False)
+#uri = "mongodb://bruk:bruk@mongo1:27017/?replicaSet=rs0&authSource=admin"
+client = MongoClient(uri)
 print(client)
 #client = MongoClient('mongo1:27011', username='bruk', password='bruk', authSource='admin', replicaSet='rs0')
 #db = client['admin']

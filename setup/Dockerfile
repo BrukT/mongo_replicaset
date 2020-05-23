@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM mongo
 
 WORKDIR /usr/src/configs
 
@@ -8,7 +8,6 @@ COPY replicaSet.js .
 COPY setup.sh .
 COPY requirements.txt .
 COPY testScript.py .
-RUN pip install -r requirements.txt
 RUN chmod +x setup.sh
 
 CMD ["./setup.sh"]
